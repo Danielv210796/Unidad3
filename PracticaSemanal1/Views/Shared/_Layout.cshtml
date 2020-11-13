@@ -1,38 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?familia,Cinzel:wght@600&display-swap" rel="stylesheet">    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Contenet/Site.css")
 </head>
 <body>
+    
+    <nav class="text-center navbar-expand-lg navbar-light bg-warning">
+        @Html.ActionLink("Cineman", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        @Html.ActionLink("EstrenosProximos", "Index", "EstrenosProximos", new { area = "" }, new { @class = "navbar-brand" })
+        @Html.ActionLink("EstrenosActuales", "Index", "EstrenosActuales", new { area = "" }, new { @class = "navbar-brand" })
+        @Html.ActionLink("Combos", "Index", "Combos", new { area = "" }, new { @class = "navbar-brand" })
+        @Html.ActionLink("Promociones", "Index", "Promociones", new { area = "" }, new { @class = "navbar-brand" })
+        @Html.ActionLink("Clasicas", "Index", "Clasicas", new { area = "" }, new { @class = "navbar-brand" })
+
+    </nav>
+
+
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p class="text-center">&copy; @DateTime.Now.Year - Desarrollado por Daniel Vargas ITT</p>
         </footer>
     </div>
 
