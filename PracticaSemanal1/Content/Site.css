@@ -4,7 +4,7 @@
     margin-left: 0;
     margin-right: 0;
     color:white;
-    background-image: url(https://cdn.pixabay.com/photo/2020/02/19/16/46/ghost-4862639_960_720.jpg);
+ /*   background-image: url(https://cdn.pixabay.com/photo/2020/02/19/16/46/ghost-4862639_960_720.jpg);*/
 }
 .thclass {
  
@@ -15,9 +15,6 @@
  
     color: darkblue;
     text-align: center;
-}
-.carousel-inner, .carousel-item > .item > img {
-    height: 100px;
 }
 
 li
