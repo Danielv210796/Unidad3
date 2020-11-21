@@ -1,0 +1,49 @@
+﻿@model IEnumerable<PracticaSemanal1.Models.Cines>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="text-warning text-center">Peliculas en estreno</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-responsive-sm table-danger text-center">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Metodos/Funciones a realizar
+        </th>
+    </tr>
+       
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Descripcion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Precio)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.Id })  |
+        @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+    </td>
+</tr>
+    }
+
+</table>

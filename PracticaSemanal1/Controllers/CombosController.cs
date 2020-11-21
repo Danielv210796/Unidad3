@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticaSemanal1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,15 @@ namespace PracticaSemanal1.Controllers
 {
     public class CombosController : Controller
     {
-        // GET: Combos
+
+        readonly CineDbConnection db = new CineDbConnection();
+
+       // GET: Combos
         public ActionResult Index()
         {
-            return View();
+            //metodo lamtamp
+            var combos = db.Combos.ToList();
+            return View(combos);
         }
     }
 }
